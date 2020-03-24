@@ -1,0 +1,21 @@
+# Imagen con Nginx + PHP + extras
+FROM richarvey/nginx-php-fpm:latest
+
+# Var. entorno con la raíz de documentos del servidor web
+ENV WEBROOT '/var/www/html/icecoder/'
+
+# Paso 1: Descargar el código de ICEcoder
+ADD https://icecoder.net/download-zip /var/www/html/icecoder.zip
+
+# Paso 2: Descomprimir
+RUN cd /var/www/html && unzip -o icecoder.zip && rm icecoder.zip && mv ICEco* $WEBROOT
+
+# Paso 3: Asignar permisos
+# RUN chmod go+w -R ${WEBROOT}/data \
+#            ${WEBROOT}/lib \
+#            ${WEBROOT}/plugins \
+#            ${WEBROOT}/tmp
+
+WORKDIR $WEBROOT
+
+EXPOSE 80
