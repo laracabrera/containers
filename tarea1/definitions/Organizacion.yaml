@@ -1,0 +1,53 @@
+Organizacion:
+  title: Organización
+  type: object
+  properties:
+    organizacion:
+      type: object
+      properties:
+        idOrganizacion:
+          type: integer
+          format: int64
+          example: 32165478
+        nombre: { "type": "string" }
+        descripcion: { "type": "string" }
+        teléfono: { "type": "string" }
+        e-mail: { "type": "string", "format": "email" }
+        direccionPostal:
+          type: object
+          description: Dirección postal
+          properties:
+            calle: { "type": "string" }
+            localidad: { "type": "string" }
+            provincia: { "type": "string" }
+            codPostal: { "type": "string", "example": "28031" }
+            país: { "type": "string" }
+        _links:
+          type: object
+          description: link relations
+          properties:
+            parent:
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+            self:
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+  x-examples:
+    organización-1:
+      organización:
+        idOrganizacion: 32165478
+        nombre: Empresa XYZ
+        descripcion: Descripción Empresa XYZ
+        teléfono: +34-912223344
+        e-mail: EmpresaXYZ@example.com
+        direccionPostal:
+            calle: "Calle de AC/DC, 65"
+            localidad: Leganés
+            provincia: Madrid
+            codPostal: "28914"
+            país: España
+        _links:
+          parent:
+            href: /organizaciones
+          self:
+            href: /organizaciones/32165478

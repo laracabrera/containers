@@ -1,0 +1,39 @@
+Producto:
+  title: Producto
+  type: object
+  properties:
+    producto:
+      type: object
+      properties:
+        idProducto:
+          type: integer
+          format: int64
+          example: 123456789
+          minimum: 1
+        descripcion:
+          type: string
+        categoria:
+          $ref: "#/definitions/Categoria"
+        _links:
+          type: object
+          description: link relations
+          properties:
+            parent: 
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+            self:
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+  x-examples:
+    ejemplo-1:
+      producto:
+        idProducto: 2020
+        descripcion: Monitor 21 pulgadas
+        categoria:
+          idCategoria: 12
+          descripcion: Material informático
+        _links:
+          parent:
+            href: /productos
+          self:
+            href: /productos/2020

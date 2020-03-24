@@ -1,0 +1,78 @@
+Pedido:
+  title: Pedido
+  type: object
+  properties:
+    pedido:
+      type: object
+      properties:
+        idPedido:
+          type: integer
+          format: int64
+          example: 111111111
+          minimum: 1
+        tipo:
+          type: string
+          description: indica si es pedido de compra o de venta
+          enum:
+            - "compra"
+            - "venta"
+        producto:
+          $ref: "#/definitions/Producto"
+        organizacion:
+          $ref: "#/definitions/Organizacion"
+        cantidad:
+          type: integer
+          format: int32
+          example: 23
+          minimum: 1
+        fechaCompra:
+          type: string
+          format: "date-time"
+        estado:
+          type: string
+          description: estado del pedido
+          enum:
+            - "abierto"
+            - "aceptado"
+            - "enviado"
+            - "recibido"
+        _links:
+          type: object
+          description: link relations
+          properties:
+            parent:
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+            self:
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+  x-examples:
+    ejemplo-1:
+      idPedido: 127
+      tipo: "compra"
+      producto:
+        idProducto: 2020
+        descripcion: Monitor 21 pulgadas
+        categoria:
+          idCategoria: 12
+          descripcion: Material informático
+      organizacion:
+        idOrganizacion: 32165478
+        nombre: Empresa XYZ
+        descripcion: Descripción Empresa XYZ
+        teléfono: +34-912223344
+        e-mail: EmpresaXYZ@example.com
+        direccionPostal:
+          calle: "Calle de AC/DC, 65"
+          localidad: Leganés
+          provincia: Madrid
+          codPostal: "28914"
+          país: España
+      cantidad: 4
+      fechaCompra: "2020-03-08T18:30:55.855Z"
+      estado: "aceptado"
+      _links:
+        parent:
+          href: /pedidos
+        self:
+          href: /pedidos/127

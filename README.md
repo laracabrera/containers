@@ -10,4 +10,5 @@ git clone https://github.com/laracabrera/AOS.git
 
 ## Contenido
 
-* [Problemas de ficheros Dockerfile](dockerfile/dockerfile.md)
+* [Ejercicio 1](./tarea1/README.md)
+* [Problemas de ficheros Dockerfile](./dockerfile/dockerfile.md)
