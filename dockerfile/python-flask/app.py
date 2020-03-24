@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# coding: latin-1
+
 import socket
 from flask import Flask
 app = Flask(__name__)
