@@ -1,0 +1,34 @@
+Categoria:
+  title: Categoria
+  type: object
+  properties:
+    categoria:
+      type: object
+      properties:
+        idCategoria:
+          type: integer
+          format: int64
+          example: 123456789
+          minimum: 1
+        descripcion:
+          type: string
+        _links:
+          type: object
+          description: link relations
+          properties:
+            parent: 
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+            self:
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+  x-examples:
+    ejemplo-1:
+      categoria:
+        idCategoria: 12
+        descripcion: Material informático
+        _links:
+          parent:
+            href: /categorias
+          self:
+            href: /categorias/12

@@ -1,0 +1,48 @@
+Evento:
+  title: Evento
+  type: objet
+  properties:
+    evento:
+      type: object
+      properties:
+        idEvento:
+          type: integer
+          format: int64
+          example: 878923748
+          minimum: 1
+        origen:
+          type: string
+          example: "PEDIDOS"
+        fecha:
+          type: string
+          format: "date-time"
+        mensaje:
+          type: string
+        nivel:
+          type: string
+          enum:
+            - "info"
+            - "warn"
+            - "error"
+        _links:
+          type: object
+          description: link relations
+          properties:
+            parent:
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+            self:
+              type: object
+              properties: {"href": { "type": "string", "format": "url" }}
+  x-examples:
+    ejemplo-1:
+      idEvento: 89776253
+      origen: "PEDIDOS"
+      fecha: "2020-03-08T18:30:55.855Z"
+      mensaje: "Pedido (compra) 127 realizado. Producto: 12. Cantidad: 2. Organización: 32165478"
+      nivel: "info"
+      _links:
+        parent:
+          href: /eventos
+        self:
+          href: /eventos/89776253
