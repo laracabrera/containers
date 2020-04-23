@@ -12,4 +12,4 @@ git clone https://github.com/laracabrera/AOS.git
 
 * [Ejercicio 1](./tarea1/README.md)
 * [Problemas de ficheros Dockerfile](./dockerfile/dockerfile.md)
-* [Tutorial básico de Kubernetes con minikube](.kubernetes/README.md)
+* [Tutorial básico de Kubernetes con minikube](./kubernetes/)

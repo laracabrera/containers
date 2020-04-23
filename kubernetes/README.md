@@ -10,7 +10,7 @@ Una vez instalado, podemos arrancar el cluster con el comando:
     minikube start
 ```
 
-![minikube-start](minikube-start.gif)
+![minikube-start](https://i.imgur.com/hSakuIu.gif)
 
 Una vez arrancado el cluster, **minikube** nos deja `kubectl` ya configurado para controlarlo. Puedes comprobar que la configuración automática es correcta pidiendo, por ejemplo, información sobre los nodos que forman el cluster:
 
