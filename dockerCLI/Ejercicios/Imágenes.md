@@ -1,7 +1,3 @@
-# Ejercicios y ejemplos de Docker CLI
-
-Una colección de diferentes ejercicios para trabajar con la terminal de Docker. Cada ejercicio está en su directorio, mientras que la solución se encuentra en el subdirectorio `solucion` dentro de cada ejercicio.
-
 ## Imágenes
 
 Las imágenes son la base de Docker. Los contenedores se iniciarán a partir de ellas y representan una plantilla de solo lectura, que se crea incorporando los requisitos necesarios para cumplir el objetivo para el cual fue creada.
