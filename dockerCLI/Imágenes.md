@@ -55,3 +55,10 @@ Deleted: sha256:14f58345b0bb2efaede03f9424412dc275343305a79952c9c8bda3d1ba
 ```
 
 Consejo: Cuidado al eliminar imágenes que se están utilizando.
+
+## Tareas
+
+1. Repetir el proceso pero instalando un contendor con MySQL, prestar especial atención en la exposición de puertos.
+
+2. Una vez conseguido el ejercicio 1, borrar todas las imágenes.
+
