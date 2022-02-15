@@ -2,7 +2,7 @@
 
 Queremos levantar un servicio de WordPress pero para ello necesitamos vincularle una Base de Datos persistente.
 
-######Creación del contenedor  para la BD
+## Creación del contenedor  para la BD
 
 Por defecto, WordPress soporta los motores de MariaDB y MySQL, por lo que no tendremos muchos problemas para configurarlo.
 Un ejemplo que nos sirva de referencia para configurar el contenedor para la base de datos de WordPress es:
@@ -22,7 +22,7 @@ Dentro de la configuración tenemos los siguientes parámetros:
  - `- e` permite introducir datos de configuración a la BD del contenedor. Es decir, hemos configurados las variables predefinidad en la BD.
  - `--mount` nos permite enlazar un volumen creado (en este caso `/var/lib/mysql`), de esta manera todos los datos de la BD quedarán almacenados allí.
 
-##### Contenedor de WordPress
+### Contenedor de WordPress
 
 Vamos a crear otra vez un contenedor de WordPress, pero tenemos que vincularlo a la BD que se ha creado. Además, queremos poder editar los ficheros de las plantillas, por si tenemos que modificar algo, así que necesitaremos montar el directorio del contenedor donde está instalado WordPress con nuestra cuenta de usuario en la máquina anfitrión.
 
