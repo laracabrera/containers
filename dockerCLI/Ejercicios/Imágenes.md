@@ -15,7 +15,7 @@ Si la instalación ha sido correcta podemos acceder a nuestro wordpress directam
 
 ### Gestión de imágenes
 
-####Descarga
+#### Descarga
 
 Las imagenes que nos descargamos se identifican, además de por el nombre, por una versión. De esa manera podemos tener distintas versiones de una misma imagen. Para usar una en concreto se utilizan los dos puntos seguido del nombre de la versión. Si no se indica nada, como hasta ahora, por defecto se descarga la etiquetada como latest.
 
@@ -25,7 +25,7 @@ Vamos a descargar alguna imagen más de docker, para ello utilizamos el comando 
 
 1. Utilizar docker pull para descargar varias imágenes diferentes, podeis consultar en Docker HUB.
 
-####Listado y borrado
+#### Listado y borrado
 
 Para poder ver todas las imágenes que tenemos descargadas podemos hacer uso del comando docker images, un ejemplo es el siguiente:
 
