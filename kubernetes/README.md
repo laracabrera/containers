@@ -215,8 +215,8 @@ Análogamente, el *template* para el servicio es:
 Lanzamos el despliegue y el servicio invocando a `kubectl`:
 
 ```shell
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/redis-slave-deployment.yaml
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/redis-slave-service.yaml
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/redis-replica-deployment.yaml
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/redis-replica-service.yaml
 ```
 
 El último paso que nos queda es lanzar el despliegue del *frontend* así como el servicio asociado al mismo. El *template* del despliegue es el siguiente:
