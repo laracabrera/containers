@@ -2,7 +2,7 @@
 
 **Kubernetes** es un orquestador de servicios para su gestión y despliegue en infraestructuras de alto rendimiento.
 
-**Minikube** es un cluster **kubernetes** con **un solo** nodo. Está pensado para desplegarlo como entorno de pruebas y aprendizaje. Se puede instalar en todos los sistemas operativos y el [proceso de instalación](https://kubernetes.io/es/docs/tasks/tools/install-minikube/) es bastante sencillo. Lo que hace es crear una máquina virtual donde se instala una versión reducida de **kubernetes**.
+**Minikube** es un cluster **kubernetes** con **un solo** nodo. Está pensado para desplegarlo como entorno de pruebas y aprendizaje. Se puede instalar en todos los sistemas operativos y el [proceso de instalación](https://minikube.sigs.k8s.io/docs/start/) es bastante sencillo. Lo que hace es crear una máquina virtual donde se instala una versión reducida de **kubernetes**.
 
 Una vez instalado, podemos arrancar el cluster con el comando:
 
