@@ -18,7 +18,13 @@ Una vez arrancado el cluster, **minikube** nos deja `kubectl` ya configurado par
     kubectl get nodes
 ```
 
-**Minikube** trae incorporado un panel de mandos gráfico al cual se puede acceder a través de un navegador. Para habilitarlo, basta con ejecutar el siguiente comando:
+**Minikube** trae incorporado un panel de mandos gráfico al cual se puede acceder a través de un navegador. Para que recoja métricas interesantes sobre nuestra infraestructura, es necesario habilitar el servicio de métricas de **Minikube** con el siguiente comando:
+
+```shell
+minikube addons enable metrics-server
+```
+
+Para habilitarlo, basta con ejecutar el siguiente comando:
 
 ```shell
     minikube dashboard
